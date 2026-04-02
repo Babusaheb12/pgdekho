@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../screen/AddOwner/category/category.dart';
 import '../../../screen/Shortlist/ShortlistScreen.dart';
 import '../../../screen/dashbord/home/Dashboard.dart';
 
@@ -89,7 +90,7 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
     return [
       MyDashboardScreen(),
       ShortlistScreen(),
-      _buildPlaceholder('Post Ad'),
+      AddCategoryScreen(),
       _buildPlaceholder('Messages'),
       _buildPlaceholder('Profile'),
     ];

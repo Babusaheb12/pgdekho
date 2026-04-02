@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ShortlistScreen extends StatefulWidget {
-  const ShortlistScreen({super.key});
+   ShortlistScreen({super.key});
 
   @override
   State<ShortlistScreen> createState() => _ShortlistScreenState();
@@ -77,7 +77,7 @@ class _ShortlistScreenState extends State<ShortlistScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text(
+        title:  Text(
           'Shortlist',
           style: TextStyle(
             color: Colors.black,
@@ -91,7 +91,7 @@ class _ShortlistScreenState extends State<ShortlistScreen> {
         automaticallyImplyLeading: false, // removes back button
       ),
       body: ListView.builder(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+        padding:  EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
         itemCount: _shortlistedItems.length,
         itemBuilder: (context, index) {
           final item = _shortlistedItems[index];
@@ -105,7 +105,7 @@ class _ShortlistScreenState extends State<ShortlistScreen> {
     bool isShortlisted = _shortlistedTitles.contains(item["title"]);
 
     return Container(
-      margin: const EdgeInsets.only(bottom: 24.0),
+      margin:  EdgeInsets.only(bottom: 24.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -138,7 +138,7 @@ class _ShortlistScreenState extends State<ShortlistScreen> {
               ),
             ],
           ),
-          const SizedBox(height: 12),
+           SizedBox(height: 12),
           // Title and Rating Row
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -146,7 +146,7 @@ class _ShortlistScreenState extends State<ShortlistScreen> {
               Expanded(
                 child: Text(
                   item["title"],
-                  style: const TextStyle(
+                  style:  TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -155,18 +155,18 @@ class _ShortlistScreenState extends State<ShortlistScreen> {
                 ),
               ),
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                padding:  EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFE3F2FD),
+                  color:  Color(0xFFE3F2FD),
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: Row(
                   children: [
-                    const Icon(Icons.star, color: Color(0xFF1976D2), size: 16),
-                    const SizedBox(width: 4),
+                     Icon(Icons.star, color: Color(0xFF1976D2), size: 16),
+                     SizedBox(width: 4),
                     Text(
                       item["rating"],
-                      style: const TextStyle(
+                      style:  TextStyle(
                         color: Color(0xFF1976D2),
                         fontWeight: FontWeight.bold,
                         fontSize: 13,
@@ -177,12 +177,12 @@ class _ShortlistScreenState extends State<ShortlistScreen> {
               ),
             ],
           ),
-          const SizedBox(height: 6),
+           SizedBox(height: 6),
           // Location Row
           Row(
             children: [
               Icon(Icons.location_on, color: Colors.grey[400], size: 16),
-              const SizedBox(width: 4),
+               SizedBox(width: 4),
               Expanded(
                 child: Text(
                   item["location"],
@@ -193,7 +193,7 @@ class _ShortlistScreenState extends State<ShortlistScreen> {
               ),
             ],
           ),
-          const SizedBox(height: 8),
+           SizedBox(height: 8),
           // Price and Reviews Row
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -203,7 +203,7 @@ class _ShortlistScreenState extends State<ShortlistScreen> {
                   children: [
                     TextSpan(
                       text: "₹${item['price']}",
-                      style: const TextStyle(
+                      style:  TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         color: Color(0xFF1976D2),
